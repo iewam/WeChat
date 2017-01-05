@@ -1,0 +1,37 @@
+//
+//  IPhoneXMPP-Prefix.pch
+//  WeChat
+//
+//  Created by caifeng on 16/9/30.
+//  Copyright © 2016年 com.lingxian01. All rights reserved.
+//
+
+#ifndef IPhoneXMPP_Prefix_pch
+#define IPhoneXMPP_Prefix_pch
+
+#import <UIKit/UIKit.h>
+#import "MWAccount.h"
+#import "MBProgressHUD+MW.h"
+#import "SVProgressHUD.h"
+#import "CategoryWF.h"
+#import "MWXMPPTool.h"
+
+
+#define mXMPPJIDKey @"XMPPJidKey"
+#define mXMPPPwdKey @"XMPPPwdKey"
+#define mXMPPIsLoginKey @"XMPPIsLoginKey"
+
+
+
+
+#ifdef DEBUG
+
+#define MWString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
+#define MWLog(...) NSLog(@"\n 类名----%s\n 行数----第%d行\n方法名---%s\n 内容----%@\n\n",[MWString UTF8String], __LINE__,__func__, [NSString stringWithFormat:__VA_ARGS__])
+//#define MWLog(...)
+#else
+
+#define MWLog(...)
+#endif
+
+#endif /* IPhoneXMPP_Prefix_pch */
